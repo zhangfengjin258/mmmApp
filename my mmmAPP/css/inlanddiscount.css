@@ -1,0 +1,37 @@
+.gn_main {
+  width: 100%;
+  background-color: #fff;
+}
+.gn_main ul li {
+  width: 50%;
+  height: 7.07rem;
+  float: left;
+  padding: .13rem;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.gn_main ul li img {
+  width: 80%;
+  height: 4.27rem;
+  margin: 5% auto 0;
+  display: block;
+}
+.gn_main ul li .title {
+  width: 4.67rem;
+  margin: .13rem 0;
+}
+.gn_main ul li .title h4 {
+  margin: 0;
+  font-size: .32rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: .4rem;
+}
+.gn_main ul li .price {
+  color: #f90;
+  font-size: .37rem;
+}
+.gn_main ul li .icon {
+  font-size: .27rem;
+  color: #666;
+}

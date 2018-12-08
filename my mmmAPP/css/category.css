@@ -1,0 +1,51 @@
+.mmm_category {
+  width: 100%;
+}
+.mmm_category ul {
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+.mmm_category .cate_title li {
+  line-height: 1.07rem;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.mmm_category .cate_title li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: .32rem;
+  font-weight: 700;
+  letter-spacing: .04rem;
+  color: #000;
+  padding-left: .27rem;
+  background-color: #ededed;
+}
+.mmm_category .cate_title li > a i.down_btn {
+  margin-right: .4rem;
+}
+.mmm_category .hide {
+  display: none;
+}
+.mmm_category .cate_list {
+  width: 100%;
+  height: 100%;
+}
+.mmm_category .cate_list li {
+  width: 33.33%;
+  height: 1.07rem;
+  line-height: 1.07rem;
+  text-align: center;
+  float: left;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.mmm_category .cate_list li a {
+  display: block;
+  font-size: .27rem;
+  color: #666;
+  background-color: #f9f9f9;
+}
+.mmm_category .cate_list li:nth-child(3n+3) {
+  border-right: none;
+}

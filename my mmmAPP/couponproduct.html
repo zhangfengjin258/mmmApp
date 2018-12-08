@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/flexible.js"></script>
+    <title>优惠券</title>
+</head>
+<body>
+    <div class="mmm_container">
+        <!-- 头部 -->
+         <div class="mmm_header">
+            <div class="back">
+                <a href="javascript:history.go(-1);">
+                    <i class="iconfont icon-back"></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            <div class="title">优惠券</div>
+         </div>
+
+         <!-- 优惠券内容 -->
+         <div class="yhq_pro">
+            <div class="icon">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+            <div class="product">
+                <div class="pro_content">
+                    <ul>
+                        <!-- 数据渲染 -->
+                    </ul>
+                </div>
+            </div>
+         </div>
+         <!-- 底部 -->
+         <div class="mmm_footer">
+             <div class="foot_nav">
+                 <ul class="clearfix">
+                     <li class="br"><a href="#">登录</a></li>
+                     <li class="br"><a href="#">注册</a></li>
+                     <li><a href="#">返回顶部</a></li>
+                 </ul>
+             </div>
+             <div class="foot_text">
+                 <p class="link-t"><span><a href="#">手机APP下载</a></span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+                 <p class="link">m.manmanbuy.com</p>
+             </div>
+         </div>
+    </div>
+    <!-- 设置模态框 -->
+    <div class="model">
+        <div class="banner">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc28.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc15.jpg" alt=""></div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <!-- <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-button-next"></div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 商品渲染 -->
+    <script type="text/html" id="productTmp">
+        {{ each result v i }}
+        <li>
+            <a href="#" class="clearfix">
+                <div class="pro_img fl">
+                    {{@ v.couponProductImg }}
+                </div>
+                <div class="pro_info fl">
+                    <div class="info_title">
+                        <span>{{ v.couponProductName }}</span>
+                    </div>
+                    <div class="price">{{ v.couponProductPrice }}</div>
+                    <div class="yx_time">
+                        {{ v.couponProductTime}}
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/swiper/js/swiper.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/couponproduct.js"></script>
+    <script>
+        //.swiper-container  :大容器的选择器
+        new Swiper ('.banner', {
+
+            // 如果需要小圆点
+            pagination: '.swiper-pagination',
+            //循环
+            loop:true,
+            //自动播放
+            autoplay: 1000,
+            //用户操作完成，自动播放重新开启
+            autoplayDisableOnInteraction:false,
+            effect:"slide"
+        });
+       
+      </script>
+</body>
+</html>

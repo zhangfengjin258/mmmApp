@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/flexible.js"></script>
+    <title>国内折扣</title>
+</head>
+<body>
+    <div class="mmm_container">
+        <!-- 头部 -->
+         <div class="mmm_header">
+            <div class="back">
+                <a href="javascript:history.go(-1);">
+                    <i class="iconfont icon-back"></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            
+            <div class="title">国内折扣</div>
+         </div>
+         <!-- 国内折扣商品列表 -->
+         <div class="gn_main">
+             <ul class="clearfix">
+                 <!-- 数据渲染 -->
+             </ul>
+         </div>
+
+         <!-- 底部 -->
+         <div class="mmm_footer">
+             <div class="foot_nav">
+                 <ul class="clearfix">
+                     <li class="br"><a href="#">登录</a></li>
+                     <li class="br"><a href="#">注册</a></li>
+                     <li><a href="#">返回顶部</a></li>
+                 </ul>
+             </div>
+             <div class="foot_text">
+                 <p class="link-t"><span><a href="#">手机APP下载</a></span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+                 <p class="link">m.manmanbuy.com</p>
+             </div>
+         </div>
+    </div>
+    <!-- 商品渲染 -->
+    <script type="text/html" id="productTmp">
+        {{ each data v i }}
+       <li>
+            <a href="discount.html?productid={{v.productId}}">
+                {{@ v.productImg }}
+                <div class="title mui-ellipsis-2"><h4>{{ v.productName }}</h4></div>
+                <div class="price mui-ellipsis">{{ v.productPrice }}</div>
+                <div class="icon">{{v.productFrom }} | {{ v.productTime }}</div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+</body>
+</html>

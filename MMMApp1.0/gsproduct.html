@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+
+<body>
+    <div class="mm_container">
+        <!-- 头部 -->
+        <div class="mm_header">
+            <div class="back">
+                <a href="index.html">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            <div class="title">
+                凑单品
+            </div>
+        </div>
+
+        <div class="mm_nav">
+            <div class="nav_right fa fa-search"></div>
+            <div class="nav_left">
+                <ul>
+                    <li class="nav_on">
+                        <a class="nav_top" href="javascript:;"><span class="jd">京东</span> 
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="market com">
+                            <!-- <li>
+                                <a href="#">全部价格</a>
+                                <i class="fa fa-check check"></i>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li class="nav_center">
+                        <a class="nav_top" href="javascript:;"> <span class="loca"> 华北</span>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="location com">
+                            <!-- <li>
+                                <a href="#">全部价格</a>
+                                <i class="fa fa-check check"></i>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li class="on">
+                        <a class="nav_top" href="javascript:;">全部
+                            <i class="fa fa-caret-down"></i>
+
+                        </a>
+                        <ul class="com">
+                            <li>
+                                <a href="javascript:;">全部价格</a>
+                                <i class="check fa fa-check"></i>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class=""></div> -->
+
+
+
+
+
+        </div>
+
+        <div class="mm_product_list">
+            <ul>
+                <li>
+                    <div class="pic">
+                        <img src="" alt="">
+                    </div>
+                    <p class="txt  ">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+                    <div class="price">
+                        <span class="terms">0.2</span>
+                        <span class="add-on">去凑单</span>
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="return">
+                    <!-- <img src="./images/top.jpg" alt=""> -->
+                    <i class="fa fa-arrow-circle-o-up">返回顶部</i>
+                </a>
+            </div>
+            <div class="footer_bottom">
+                <p>
+                    <a class="app" href="#">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/index.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/gsproduct.js"></script>
+
+    <script type="text/template" id="sort_tmp">
+        {{ each result v}}
+        <li data-id="{{v.shopId}}">
+            <a href="javascript:;">{{v.shopName}}</a>
+            <i class="check fa fa-check"></i>
+        </li>
+        {{ /each}}
+    </script>
+
+
+    <script type="text/template" id="cate_tmp">
+        {{ each result v}}
+        <li data-id="{{v.areaId}}">
+            <a href="javascript:;">{{v.areaName}}</a>
+            <i class="fa fa-check check"></i>
+        </li>
+        {{ /each }}
+    </script>
+
+
+    <script type="text/template" id="list_temp">
+        {{ each result v }}
+        <li>
+            <div class="pic">
+                <img src="{{v.productImg}}" alt="">
+            </div>
+            <p class="txt">{{v.productName}}</p>
+            <div class="price">
+                <span class="terms">{{v.productPrice}}</span>
+                <span class="add-on">去凑单</span>
+            </div>
+        </li>
+        {{ /each }}
+    </script>
+
+
+
+</body>
+
+</html>

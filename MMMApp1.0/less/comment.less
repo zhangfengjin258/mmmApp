@@ -1,0 +1,230 @@
+.mm_container {
+    width: 100%;
+    // max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+// 头部
+.mm_header {
+    width: 100%;
+    height: 1.32rem;
+    background-color: #FF841D;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    .logo {
+        width: 4.95rem;
+        height: .67rem;
+        background: url("../images/header_logo.png") center no-repeat;
+        background-size: 4.95rem .67rem;
+        position: absolute;
+        top: .36rem;
+        left: .27rem;
+    }
+    .download {
+        width: .91rem;
+        height: .91rem;
+        background: url("../images/header_app.png");
+        background-size: .91rem .91rem;
+        position: absolute;
+        top: .21rem;
+        right: .27rem;
+    }
+}
+
+// 搜索
+.mm_search {
+    width: 100%;
+    height: 1.33rem;
+    padding-right: 1.93rem;
+    padding-left: .13rem;
+    background-color: #fff;
+    position: relative;
+    button {
+        width: 1.6rem;
+        height: .8rem;
+        background-color: #FF841D;
+        border-radius: .4rem;
+        font-size: .32rem;
+        color: #fff;
+        position: absolute;
+        top: .27rem;
+        right: .2rem;
+    }
+    input {
+        width: 100%;
+        height: .8rem;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        border-radius: .4rem;
+        margin-top: .27rem;
+        font-size: .24rem;
+        padding-left: .24rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.list_title {
+    width: 100%;
+    height: 1rem;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    background-image: linear-gradient(#fff, #ccc);
+    overflow: hidden;
+    padding:0 .13rem;
+    a {
+        // display: block;
+        height: 1rem;
+        font-size: .32rem;
+        line-height: .97rem;
+    }
+    .active {
+        display: block;
+        width: 1.67rem;
+        height: .8rem;
+        float: right;
+        text-align: center;
+        margin-top: .11rem;
+        background: #d0d0d0;
+        border-radius: .13rem;
+        background-image: linear-gradient(#d7d7d7,#f5f5f5);
+        line-height: .8rem;
+    }
+}
+
+
+
+// 折扣部分
+.mm_discount {
+    width: 100%;
+    // height: 100px;
+    background-color: #fff;
+    
+    .discount_product {
+        width: 100%;
+        height: 3.41rem;
+        padding: .33rem .13rem;
+        border-bottom: .03rem solid #f1f1f1;
+        .pic {
+            width: 2.67rem;
+            height: 2.67rem;
+            // margin-top: .24rem;
+        }
+        .info {
+            height: 2.67rem;
+            overflow: hidden;
+            padding-left: .13rem;
+        }
+        .info_title {
+            color: #333;
+            font-size: .32rem;
+            span {
+                color: #ff761a;
+            }
+        }
+        .info_other {
+            margin-top: 1.07rem;
+            color: #a1a1a1;
+
+        }
+    }
+}
+
+
+
+// 分页部分
+.list_page {
+    width: 100%;
+    height: 1.24rem;
+    padding-top: .2rem;
+    span {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+        font-size: .32rem;
+        a {
+            width: 2.2rem;
+            height: .93rem;
+            display: inline-block;
+            background-image: linear-gradient(#fff,#ccc);
+            border-radius: 5px;
+            border: 1px solid #c4c4c4;
+            line-height: .93rem;
+            
+        }
+        select {
+            width: 2.2rem;
+            height: .93rem;
+            padding-left: .27rem;
+        }
+    }
+}
+
+
+// 省钱控头部
+.mm_header {
+    line-height: 1.32rem;
+    .back {
+        font-size: .53rem;
+        float: left;
+        margin-left: .4rem;
+        a {
+            color: #fff;
+        }
+    }
+    .title{
+        text-align: center;
+        overflow: hidden;
+        font-size: .6rem;
+        color: #fff;
+        margin-right: 1.07rem;
+    }
+    .download {
+        float: right;
+    }
+
+}
+
+// 底部
+.mm_footer {
+    margin: .67rem 0;
+  
+    .footer_top {
+        border-top: .03rem solid #c4c4c4;
+        border-bottom: .03rem solid #c4c4c4;
+        height: .85rem;
+        line-height: .8rem;
+        a {
+            display: block;
+            float: left;
+            text-align: center;
+            width: 33.3%;
+            border-right: .03rem solid #c4c4c4;
+            font-size: .37rem;
+            &:last-child{
+                border-right:none;  
+                position: relative; 
+            }
+        }
+    }
+
+    .footer_bottom {
+        margin-top: .4rem;
+        text-align: center;
+        font-size: .32rem;
+        .app {
+            color: red;
+        }
+        p {
+            color: #5b6168;
+        }
+    }
+}

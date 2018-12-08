@@ -1,0 +1,36 @@
+.cate_nav {
+  width: 100%;
+  height: .93rem;
+  line-height: .93rem;
+  font-size: .32rem;
+  border-top: 1px solid #ccc;
+  background: linear-gradient(#fff, #ccc);
+}
+.cate_nav ol {
+  float: left;
+  padding-left: .27rem;
+}
+.cate_nav ol li {
+  float: left;
+}
+.cate_nav ol li a {
+  color: #000;
+}
+.cate_nav button {
+  float: right;
+  margin-right: .27rem;
+  transform: translateX(-0.27rem);
+  margin: 0;
+  padding: .13rem .27rem;
+  margin-top: .13rem;
+  background-color: #eee;
+  box-shadow: 0 0 .13rem .05rem inset #ccc;
+}
+.mmm_product {
+  margin-top: 0;
+}
+.mmm_product .pro_info .price {
+  margin: .27rem 0;
+  font-size: .37rem;
+  color: #e92322;
+}

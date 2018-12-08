@@ -1,0 +1,75 @@
+.mmm_header {
+  background-color: #F4483E;
+}
+.yhq_pro {
+  width: 100%;
+}
+.yhq_pro .icon {
+  height: 1.33rem;
+  width: 100%;
+  line-height: 1.33rem;
+  text-align: center;
+  color: #aaa;
+  font-size: .32rem;
+}
+.yhq_pro .product .pro_content {
+  width: 100%;
+}
+.yhq_pro .product .pro_content ul {
+  width: 100%;
+  margin: 0 0 .67rem;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.yhq_pro .product .pro_content ul li {
+  width: 100%;
+  padding: .13rem .27rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .27rem;
+}
+.yhq_pro .product .pro_content ul li .pro_img {
+  width: 30%;
+  background-color: red;
+}
+.yhq_pro .product .pro_content ul li .pro_info {
+  width: 70%;
+  padding: 0 .13rem;
+}
+.yhq_pro .product .pro_content ul li .pro_info .info_title {
+  color: #666;
+  width: 100%;
+  font-size: .32rem;
+}
+.yhq_pro .product .pro_content ul li .pro_info .price {
+  width: 100%;
+  font-size: .37rem;
+  color: #000;
+  font-weight: bold;
+  margin: .4rem 0;
+}
+.yhq_pro .product .pro_content ul li .pro_info .yx_time {
+  font-size: .32rem;
+  color: #f90;
+  margin-bottom: .27rem;
+}
+.yhq_pro .product .pro_content ul li:last-child {
+  border-bottom: none;
+}
+.model {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.model .banner {
+  width: 2.67rem;
+  margin: 2.67rem auto;
+  background-color: green;
+  overflow: hidden;
+}
+.model .banner .swiper-button-prev,
+.model .banner .swiper-button-next {
+  font-size: .4rem;
+}

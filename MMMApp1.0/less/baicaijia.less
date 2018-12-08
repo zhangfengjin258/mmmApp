@@ -1,0 +1,163 @@
+@import "veriable";
+@import "normalize";
+@import "base";
+// @import "adapter";
+@import "comment";
+.mm_header {
+    background-color: #f4483e;
+}
+
+.bargain_nav {
+    width: 100%;
+    height: 1.07rem;
+    background-color: #fff;
+    .nav_left {
+        padding-left: .13rem;
+        height: 1.07rem;
+        border-right: 1px solid #c4c4c4;
+        width: 8.93rem;
+        overflow: hidden;
+        ul {
+            overflow: hidden;
+            width: 26.67rem;
+            li {
+                height: 100%;
+                float: left;
+                line-height: 1.07rem;
+            }
+            a {
+                display: inline-block;
+                height: 1.07rem;
+                padding: 0 .33rem;
+                font-size: .32rem;
+                &.active {
+                    border-bottom: .04rem solid #e12a2b;
+                    color: #e52f26;
+                }
+            }
+            a:focus {
+                border-bottom: .04rem solid #e12a2b;
+                color: #e52f26;
+            }
+        }
+    }
+    .nav_right {
+        float: right;
+        width: 1.07rem;
+        height: 1.07rem;
+        background-color: #f4f4f4;
+        font-size: .8rem;
+        padding-left: .13rem;
+        line-height: 1rem;
+        color: #585757;
+    }
+}
+
+
+.bargain_conttent {
+   
+    li {
+        margin-top: .13rem;
+        width: 100%;
+        height: 4rem;
+        padding: .27rem .13rem;
+        background-color: #fff;
+        .img {
+            float: left;
+            width: 3.47rem;
+            height: 3.47rem; // background-color: pink;
+        }
+        .info_post {
+            // float: left;
+            overflow: hidden;
+            height: 100%;
+            padding-left: .13rem;
+            position: relative;
+        }
+        .postage {
+            font-size: .32rem;
+            padding-top: .07rem;
+        }
+        .price {
+            padding-top: .27rem;
+            font-size: .43rem;
+            color: #fc0512;
+            i {
+                font-size: .32rem;
+            }
+            em {
+                font-size: .27rem
+            }
+            del {
+                font-size: .32rem;
+                color: #a79f9a;
+            }
+        }
+        .bar {
+            padding-top: 10px;
+            i {
+                display: inline-block;
+                width: 2.2rem;
+                height: .4rem;
+                line-height: .4rem;
+                border: 1px solid #fb060a;
+                border-radius: .07rem;
+                font-size: .19rem;
+                background-color: #ffb7b7;
+                position: relative;
+                color: #fff;
+                text-align: center;
+                em {
+                    display: inline-block;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #fc353a;
+                    border-radius: .07rem;
+                }
+                span {
+                    z-index: 999;
+                    position: relative;
+                }
+            }
+            b {
+                font-size: .32rem;
+                color: #fd3c2c;
+                font-weight: 400;
+                padding-left: .13rem;
+            }
+        }
+        .conpon {
+            width: 2.87rem;
+            height: .67rem;
+            position: absolute;
+            display: inline-block;
+            bottom: 0;
+            left: .16rem;
+            line-height: .6rem;
+            text-align: center;
+            border: .04rem dashed #ef898b;
+            font-size: .27rem;
+            a {
+                color: #fc0512;
+            }
+        }
+        .link {
+            width: 1.53rem;
+            height: .60rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: .03rem solid #ff4948;
+            background-color: #ff5e5d;
+            border-radius: 5px;
+            font-size: .24rem;
+            text-align: center;
+            line-height: .55rem;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

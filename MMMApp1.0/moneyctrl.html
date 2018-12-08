@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控</title>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+</head>
+
+<body>
+    <div class="mm_container">
+        <!-- 头部 -->
+        <div class="mm_header">
+            <div class="back">
+                <a href="index.html">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            <div class="title">省钱控 - 最新优惠</div>
+        </div>
+
+        <div class="mm_discount">
+            <ul>
+                <li class="discount_product">
+                    <a href="#">
+                        <div class="pic fl">
+                            <!-- <img src="./images/ic_cu.png" alt=""> -->
+                        </div>
+                        <div class="info">
+                            <div class="info_title">
+                                移动端凑单品：海天 鲜味 生抽 1.28L
+                                <span>10.9元</span>
+                            </div>
+                            <div class="info_other">
+                                <span class="mall">京东商城 | 10-25 14:10</span>
+                                <span class="num fr">1</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- 分页 -->
+        <div class="mm_productlist">
+
+
+            <!-- 分页 -->
+            <div class="list_page">
+                <span class="page1">
+                    <a href="javascript:;">上一页</a>
+                </span>
+                <span>
+                    <select name="select" id="dropDown">
+                        <option value="1" selecter>1/3</option>
+                        <option value="2">2/3</option>
+                        <option value="3">3/3</option>
+
+                    </select>
+                </span>
+
+                <span class="page2">
+                    <a href="javascript:;">下一页</a>
+                </span>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="return">
+                    <!-- <img src="./images/top.jpg" alt=""> -->
+                    <i class="fa fa-arrow-circle-o-up">返回顶部</i>
+
+                </a>
+
+            </div>
+            <div class="footer_bottom">
+                <p>
+                    <a class="app" href="#">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/index.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+
+
+    <!-- 渲染商品 -->
+    <script type="text/html" id="discount_tmp">
+        {{ each result v i }}
+        <li class="discount_product">
+            <a href="moneyproduct.html?productid={{v.productId}}">
+                <div class="pic fl">
+                    <!-- <img src="./images/ic_cu.png" alt=""> -->
+                    {{@ v.productImgSm}}
+                </div>
+                <div class="info">
+                    <div class="info_title">
+                        {{ v.productName }}
+                        <span>{{ v.productPinkage }}</span>
+                    </div>
+                    <div class="info_other">
+                        <span class="mall">{{ v.productFrom }} | {{ v.productTime }}</span>
+                        <span class="num fr">{{ v.productComCount }}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+    <script type="text/html" id="select_tmp">
+        <% for(var i = 0; i <= pages; i++ ) { %>
+        <option value="{{i}}" {{ i== pageid ? 'selected="selected"' : ''}}><%= i+1 %>/<%= pages+1 %></option>
+        <% } %>
+    </script>
+
+
+
+</body>
+
+</html>

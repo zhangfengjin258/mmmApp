@@ -1,0 +1,110 @@
+.sqg_detail {
+  width: 100%;
+  padding: .27rem ;
+  background-color: #fff;
+}
+.sqg_detail .detail_title {
+  width: 100%;
+  padding-top: .13rem;
+}
+.sqg_detail .detail_title h4 {
+  font-size: .47rem;
+}
+.sqg_detail .detail_icon {
+  font-size: .24rem;
+}
+.sqg_detail .detail_com {
+  margin-top: .4rem;
+  font-size: .37rem;
+  line-height: .67rem;
+}
+.sqg_detail .detail_com img {
+  width: 30%;
+  float: right;
+}
+.sqg_detail .detail_area {
+  width: 100%;
+}
+.sqg_detail .detail_area ul#disstorck {
+  width: 3.77rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 3px 1px #666;
+  padding: .27rem .4rem;
+  margin: 0 auto;
+}
+.sqg_detail .detail_area ul#disstorck li {
+  width: 2.67rem;
+  height: .53rem;
+  margin: 0 auto;
+  border-bottom: 1px dashed #ccc;
+}
+.sqg_detail .detail_area ul#disstorck li a {
+  display: block;
+  color: #666;
+}
+.sqg_detail .detail_area ul#disstorck li a span {
+  font-size: .24rem;
+  overflow: hidden;
+}
+.sqg_detail .detail_area ul#disstorck li a strong {
+  font-weight: 700;
+  color: #f90;
+  float: right;
+}
+.sqg_detail .detail_img {
+  width: 60%;
+}
+.sqg_detail .detail_btn {
+  width: 8.93rem;
+  margin: .27rem auto;
+  height: .83rem;
+  background-color: #f90;
+  border-radius: .07rem;
+  text-align: center;
+  line-height: .83rem;
+  font-size: .4rem;
+  color: #fff;
+}
+.sqg_detail .detail_pinlun {
+  width: 100%;
+  margin-top: .27rem;
+}
+.sqg_detail .detail_pinlun .tit {
+  font-size: .32rem;
+  padding: .13rem 0;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b {
+  overflow: hidden;
+  margin: .27rem 0;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .userimg {
+  width: 15%;
+  float: left;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .userimg img {
+  height: 1.33rem;
+  width: 1.33rem;
+  border-radius: 50%;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .con {
+  width: 85%;
+  float: left;
+  font-size: .32rem;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .con .name {
+  width: 100%;
+  font-size: .27rem;
+  line-height: .67rem;
+  overflow: hidden;
+  float: left;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .con .name .username {
+  float: left;
+  color: #09d;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .con .name .time {
+  float: right;
+}
+.sqg_detail .detail_pinlun .list .ui-border-b .con .content img {
+  width: .53rem;
+}

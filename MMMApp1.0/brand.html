@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌大全</title>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/brand.css">
+</head>
+
+<body>
+    <div class="mm_container">
+        <!-- 头部 -->
+        <div class="mm_header">
+            <a href="index.html"><i class="logo"></i></a>
+            <i class="download"></i>
+        </div>
+        <!-- 搜索 -->
+        <div class="mm_search">
+            <button>搜索</button>
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+
+
+
+        <!-- 导航栏 -->
+        <div class="list_title">
+            <a href="index.html">首页></a>
+            <a href="category.html">全部分类></a>
+        </div>
+
+        <!-- 热门品牌排行 -->
+        <div class="mm_remain">
+            <p><span class="re_top"> 平板电视</span>哪个牌子好</p>
+        </div>
+        <!-- 电视品牌  -->
+        <div class="mm_sign">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="number">1</span>
+                        <span class="icon fa fa-angle-right"></span>
+                        <div class="info">
+                            <div class="txt">三星平板电视</div>
+                            <p>30天全网销售：242408件</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 电视产品销量 -->
+        <div class="mm_remain">
+            <a href="javaScript">
+                <p><span class="re_top"> 平板电视</span>产品销量排行</p>
+            </a>
+        </div>
+
+        <!-- 产品销量排行 -->
+        <div class="list_content">
+            <ul>
+                <li class="discount_product">
+                    <a href="#">
+                        <div class="pic fl">
+                            <img src="./images/ic_cu.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info_title">
+                                乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+                                <p>￥1999.00</p>
+                            </div>
+                            <div class="info_other">
+                                <span class="mall">报价(6)</span>
+                                <span class="num">评论(2286)</span>
+                                <div class="star">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 电视产品销量 -->
+        <div class="mm_remain">
+            <a href="javaScript">
+                <p><span class="re_top"> 平板电视</span>最新评论</p>
+            </a>
+        </div>
+
+
+        <div class="mm_comment">
+            <ul>
+
+            </ul>
+
+        </div>
+
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="return">
+                    <!-- <img src="./images/top.jpg" alt=""> -->
+                    <i class="fa fa-arrow-circle-o-up">返回顶部</i>
+                </a>
+            </div>
+            <div class="footer_bottom">
+                <p>
+                    <a class="app" href="#">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/index.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/brand.js"></script>
+
+    <script type="text/template" id="sign_tmp">
+        {{ each result v i}}
+        <li>
+            <a href="productlist.html?categoryid={{v.categoryId}}&pageid=1">
+                <span class="number" data-index="{{i}}">{{i+1}}</span>
+                <span class="icon fa fa-angle-right"></span>
+                <div class="info">
+                    <div class="txt">{{v.brandName}}</div>
+                    <p>{{v.brandInfo}}</p>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+
+    <script type="text/template" id="list_tmp">
+        {{ each result v }}
+        <li class="discount_product" data-id="{{v.productId}}">
+            <a href="bijia.html?productid={{v.productId}}">
+                <div class="pic fl">
+                    {{@v.productImg}}
+                </div>
+                <div class="info">
+                    <div class="info_title">
+                        <div> {{v.productName}}</div>
+                        <p>{{v.productPrice}}</p>
+                    </div>
+                    <div class="info_other">
+                        <span class="mall">{{v.productQuote}}</span>
+                        <span class="num">{{v.productCom}}</span>
+                        <div class="star">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each}}
+    </script>
+
+
+
+    <script type="text/template" id="con_tmp">
+        {{ each result v}}
+        <ul>
+            <li class="com_message">
+                <div class="pro_info">
+                    <div class="pic fl">
+                        <img src="{{v.img}}" alt="">
+                    </div>
+                        <p class="text">{{v.text}}</p>
+                </div>
+                <div class="com_info">
+                    <div class="per_info">
+                        <span class="name">{{v.comName}}</span>
+                        <div class="star">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="time">{{v.comTime}}</span>
+                    </div>
+                    <div class="con">
+                        {{v.comContent}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+        {{ /each }}
+    </script>
+
+</body>
+
+</html>

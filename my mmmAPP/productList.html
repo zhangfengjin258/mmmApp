@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/productList.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/flexible.js"></script>
+    <title>商品列表</title>
+</head>
+<body>
+    <div class="mmm_container">
+        <!-- 头部 -->
+         <div class="mmm_header">
+            <a href="#">
+                <i class="logo"></i>
+            </a>
+            <a href="javascript:;">
+                <i class="download"></i>
+            </a>
+         </div>
+         <!-- 搜索框 -->
+         <div class="mmm_search mui-clearfix">
+             <input type="text" class="search_input fl" placeholder="请输入你想比价的商品">
+             <button class="search_btn fl">搜索</button>
+         </div>
+         <!-- 面包屑导航 -->
+         <div class="cate_nav clearfix">
+            <ol class="clearfix">
+               <!-- 数据渲染       -->
+            </ol>
+            <button>筛选</button>
+         </div>
+         <!-- 产品 -->
+         <div class="mmm_product">
+            <div class="pro_content">
+                <ul>
+                    <!-- 数据渲染 -->
+                </ul>
+            </div>
+              <!-- 分页 -->
+            <div class="page clearfix">
+                <div class="btn_prev"><button>上一页</button></div>
+                <div class="list_page">
+                    <select class="page_box" name="select" id="dropDown">
+                        <option value="1">1/3</option>
+                        <option value="2">2/3</option>
+                        <option value="3">3/3</option>
+                    </select>
+                </div>
+                <div class="btn_next"><button>下一页</button></div>
+            </div>
+        </div>
+         <!-- 底部 -->
+         <div class="mmm_footer">
+             <div class="foot_nav">
+                 <ul class="clearfix">
+                     <li class="br"><a href="#">登录</a></li>
+                     <li class="br"><a href="#">注册</a></li>
+                     <li><a href="#">返回顶部</a></li>
+                 </ul>
+             </div>
+             <div class="foot_text">
+                 <p class="link-t"><span><a href="#">手机APP下载</a></span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+                 <p class="link">m.manmanbuy.com</p>
+             </div>
+         </div>
+    </div>
+    <!-- 面包屑导航渲染 -->
+    <script type="text/html" id="catenavTmp">
+        {{ each result v i }}
+        <li>
+            <a href="index.html">首页</a><a href="category.html">> 全部分类</a><a href="#">> {{ v.category }}</a>
+        </li>
+        {{ /each }}
+    </script>
+    <!-- 产品渲染 -->
+    <script type="text/html" id="productTmp">
+        {{ each result v i }}
+        <li class="clearfix">
+            <a href="bijia.html?productid={{ v.productId}}&categoryid={{ v.categoryId }}&productlistid={{ v.productListId }}" class="clearfix">
+                <div class="pro_img fl">
+                    {{@ v.productImg }}
+                </div>
+                <div class="pro_info fr">
+                    <div class="info_title mui-ellipsis-2">
+                        <span>{{ v.productName }}</span>
+                    </div>
+                    <div class="price">{{ v.productPrice }}</div>
+                    <div class="info_other">
+                        <span class="time fl">{{ v.productQuote }}  {{ v.productCom }}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/productList.js"></script>
+    <script type="text/html" id="selectTmp">
+        <% for(var i = 0; i <= pages; i++ ) { %>
+            <option value="{{i}}" {{ i== pageid ? 'selected="selected"' : ''}}><%= i %>/<%= pages %></option>
+        <% } %>
+    
+    </script>
+</body>
+</html>

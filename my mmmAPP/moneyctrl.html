@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/flexible.js"></script>
+    <title>省钱控</title>
+</head>
+<body>
+    <div class="mmm_container">
+        <!-- 头部 -->
+         <div class="mmm_header">
+            <div class="back">
+                <a href="javascript:history.go(-1);">
+                    <!-- <div class="back_img">
+
+                    </div> -->
+
+                    <i class="iconfont  icon-back
+                    "></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            
+            <div class="title">省钱控 - 最新优惠</div>
+         </div>
+         <div class="mmm_product">
+                <div class="pro_content">
+                    <ul>
+                        <!-- 数据渲染 -->
+                    </ul>
+                </div>
+
+                <!-- 分页 -->
+                <div class="page clearfix">
+                    <div class="btn_prev"><button>上一页</button></div>
+                    <div class="list_page">
+                        <select class="page_box" name="select" id="dropDown">
+                            <option value="1">1/3</option>
+                            <option value="2">2/3</option>
+                            <option value="3">3/3</option>
+                        </select>
+                    </div>
+                    <div class="btn_next"><button>下一页</button></div>
+                </div>
+            </div>
+         <!-- 底部 -->
+         <div class="mmm_footer">
+             <div class="foot_nav">
+                 <ul class="clearfix">
+                     <li class="br"><a href="#">登录</a></li>
+                     <li class="br"><a href="#">注册</a></li>
+                     <li><a href="#">返回顶部</a></li>
+                 </ul>
+             </div>
+             <div class="foot_text">
+                 <p class="link-t"><span><a href="#">手机APP下载</a></span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+                 <p class="link">m.manmanbuy.com</p>
+             </div>
+         </div>
+    </div>
+    <!-- 商品渲染 -->
+    <script type="text/html" id="productTmp">
+        {{ each result v i }}
+        <li class="clearfix">
+            <a href="moneyproduct.html?productid={{v.productId}}" class="clearfix">
+                <div class="pro_img fl">
+                    {{@ v.productImgSm }}
+                </div>
+                <div class="pro_info fr">
+                    <div class="info_title">
+                        <span>{{ v.productName }}</span>
+                        <span class="prize">{{ v.productPinkage }}</span>
+                    </div>
+                    <div class="info_other">
+                        <span class="time fl">{{ v.productFrom}} | {{ v.productTime }}</span>
+                        <span class="com fr">{{ v.productComCount }}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+    
+    
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+    <script type="text/html" id="selectTmp">
+        <% for(var i = 0; i <= pages; i++ ) { %>
+            <option value="{{i}}" {{ i== pageid ? 'selected="selected"' : ''}}><%= i+1 %>/<%= pages+1 %></option>
+        <% } %>
+    
+    </script>
+</body>
+</html>

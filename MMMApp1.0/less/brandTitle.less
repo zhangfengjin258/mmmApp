@@ -1,0 +1,93 @@
+@import "veriable";
+@import "normalize";
+@import "base";
+// @import "adapter";
+@import "comment";
+.list_title {
+    width: 100%;
+    height: 1rem;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    background-image: linear-gradient(#fff, #ccc);
+    overflow: hidden;
+    padding: 0 .13rem;
+    a {
+        // display: block;
+        height: 1rem;
+        font-size: .32rem;
+        line-height: .97rem;
+    }
+}
+
+// 热门品牌排行 
+.mm_remain {
+    padding: .27rem;
+    background-color: #fff;
+    p {
+        width: 100%;
+        height: 1.07rem;
+        background-color: #ededed;
+        border: .03rem solid #c4c4c4;
+        font-size: .32rem;
+        line-height: 1.01rem;
+        padding-left: .13rem;
+        color: #7c3c2d;
+    }
+   
+
+   
+}
+
+.mm_category {
+    width: 100%; 
+    border-radius: .11rem;
+    border: .03rem solid #c4c4c4;
+    .category_title>li {
+        background-color: #ededed;
+        width: 100%;
+        >a {
+            padding-left: .27rem;
+            display: block;
+            color: #333;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            line-height: 1.04rem;
+            font-size: .32rem;
+            border-bottom: .01rem solid #c4c4c4;
+            position: relative; 
+            i {
+                position: absolute;
+                top: .36rem;
+                right: .4rem;
+            }
+        }
+        .category_content {
+            &.move {
+                display: none;
+            }
+            background-color: #f9f9f9;
+            >li {
+                width: 33.3%;
+                height: 1.07rem;
+                float: left;
+                border-bottom: 1px solid #c4c4c4;
+                border-right: 1px solid #c4c4c4;
+                &:nth-child(3n) {
+                    border-right: none;
+                }
+                >a {
+                    display: block;
+                    color: #333;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 1.04rem;
+                    font-size: .27rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+

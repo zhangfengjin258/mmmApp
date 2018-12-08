@@ -1,0 +1,29 @@
+.mmm_header {
+  width: 100%;
+}
+.mmm_header .back {
+  width: 1.33rem;
+  height: 1.33rem;
+  position: absolute;
+  text-align: center;
+  line-height: 1.33rem;
+}
+.mmm_header .back i {
+  width: 1.33rem;
+  font-size: .67rem;
+  color: #fff;
+}
+.mmm_header .title {
+  width: 100%;
+  height: 1.33rem;
+  line-height: 1.33rem;
+  text-align: center;
+  padding: 0 1.33rem;
+  color: #fff;
+}
+.mmm_product {
+  margin-top: 0;
+}
+.mmm_product .pro_content ul li {
+  border-bottom: none;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价-淘宝内部券</title>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+
+<body>
+    <div class="mm_container">
+        <!-- 头部 -->
+        <div class="mm_header">
+            <div class="back">
+                <a href="index.html">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            <div class="title">
+                白菜价-淘宝内部券
+            </div>
+        </div>
+
+        <!-- 商品详情 bargain(交易) -->
+        <div class="mm_bargain">
+            <div class="bargain_nav">
+                <div class="nav_right fa fa-search">
+
+                </div>
+                <div class="nav_left">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="bargain_conttent">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="mm_footer">
+            <div class="footer_top">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" class="return">
+                    <!-- <img src="./images/top.jpg" alt=""> -->
+                    <i class="fa fa-arrow-circle-o-up">返回顶部</i>
+
+                </a>
+
+            </div>
+            <div class="footer_bottom">
+                <p>
+                    <a class="app" href="#">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/index.js"></script>
+    <script src="./lib/iscroll/iscroll.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/baicaijia.js"></script>
+
+    <script type="text/template" id="nav_tmp">
+        {{ each result v }}
+        <li data-id="{{v.titleId}}">
+            <a href="javascript:;">{{v. title}}</a>
+        </li>
+        {{ /each }}
+    </script>
+
+    <script type="text/template" id="con_tmp">
+        {{ each result v}}
+        <li>
+            <div class="img">
+                {{@v.productImg}}
+            </div>
+            <!-- postage包邮 -->
+            <div class="info_post">
+                <div class="postage">
+                    {{@v.productName}}
+                </div>
+                <div class="price">
+                    {{@v.productPrice}}
+                </div>
+                {{@v.productCouponRemain}}
+                <div class="conpon">
+                    {{@v.productCoupon}}
+                </div>
+                <div class="link">
+                    <!-- <a biz-itemid="56297410_8818824_54778388" isconvert="1" href="http://s.click.taobao.com/3HlIdQx" target="_blank">下单链接</a> -->
+                    {{@v.productHref}}
+                </div>
+            </div>
+        </li>
+        {{ /each }}
+    </script>
+
+</body>
+
+</html>

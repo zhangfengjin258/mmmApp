@@ -1,0 +1,142 @@
+@import "veriable";
+@import "normalize";
+@import "base";
+// @import "adapter";
+@import "comment";
+
+.mm_nav {
+    width: 100%;
+    height: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    .nav_right {
+        float: right;
+        width: 1rem;
+        height: .95rem;
+        background-color: #f4f4f4;
+        font-size: .8rem;
+        padding-left: .13rem;
+        line-height: 1rem;
+        color: #585757;
+    }
+    .nav_left {
+        height: 1rem;
+        margin-right: 1rem;
+        border-right: 1px solid #ccc;
+        ul {
+            // overflow: hidden;
+            li {
+                width: 33.3%;
+                height: 1rem;
+                float: left;
+              
+                .nav_top {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 1rem;
+                    font-size: .4rem;
+                }
+               
+            }
+       
+            .com {
+                width: 100%;
+                box-shadow: 0 3px 5px rgba(0,0,0,.2);
+                position: absolute;
+                top: 1rem;
+                left: 0;
+                display:none;
+                li {
+                    height: 1rem;
+                    width: 100%;
+                    background-color: #fff;
+                    z-index: 999;
+                    border-bottom: 1px solid #ccc;
+                    position: relative;
+                    padding: 0 .27rem;
+                    line-height: 1rem;
+        
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        font-size: .4rem;
+                    }
+                    .check {
+                        position: absolute;
+                        top: .19rem;
+                        right: .27rem;
+                        font-size: .53rem;
+                        color: #ff841d;
+                        display: none;
+                    }
+                }
+            }
+            .popsort,
+            .popcat,
+            .popprice {
+                display:block;
+            }
+        
+        }
+    }
+}
+
+
+.mm_product_list {
+    width: 100%;
+    padding-top: .2rem;
+    ul {
+        overflow: hidden;
+
+        li {
+            width: 4.73rem;
+            height: 6rem;
+            background-color: #fff;
+            float: left;
+            margin-left: .19rem;
+            margin-top: .2rem;
+            padding: .13rem;
+         
+            .pic{
+                img {
+                    width: 100%;
+                    height: 4.67rem;
+                    margin: 0 auto;
+                }
+              
+            }
+            .txt {
+                font-size: .21rem;
+                white-space: nowrap;
+                overflow: hidden;
+                font-weight: 700;
+            }
+            .price {
+                // padding-top: .27rem;
+               line-height: .67rem;
+                .terms {
+                    color: #f65016;
+                    font-size: .32rem;
+                }
+                .add-on {
+                    float: right;
+                    width: 1.4rem;
+                    height:.53rem;
+                    line-height: .4rem;
+                    text-align: center;
+                    margin-top: .07rem;
+                    font-size: .24rem;
+                    border: 2px solid #ff8500;
+                    background-color: #ff9501;
+                    border-radius: 5px;
+                    color: #fff;
+
+                }
+            }
+        }
+    }
+}

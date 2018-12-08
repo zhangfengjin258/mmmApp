@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <script src="./lib/flexible.js"></script>
+    <title>凑单品</title>
+</head>
+<body>
+    <div class="mmm_container">
+        <!-- 头部 -->
+         <div class="mmm_header">
+            <div class="back">
+                <a href="javascript:history.go(-1);">
+                    <i class="iconfont icon-back"></i>
+                </a>
+            </div>
+            <i class="download"></i>
+            
+            <div class="title">凑单品</div>
+         </div>
+
+         <div class="cdp_main">
+             <div class="cdp_nav">
+                 <ul class="clearfix">
+                     <li class="jd">
+                         <a href="#">
+                             <span> 京东 </span>
+                            <i class="iconfont icon-xiajiantou1"></i></a>
+                         <div class="jddown">
+                             <ul>
+                                 <!-- 数据渲染 -->
+                             </ul>   
+                         </div>
+                     </li>
+                     <li class="hb">
+                         <a href="#">
+                            <span>华北 </span>
+                            
+                            <i class="iconfont icon-xiajiantou1"></i></a>
+                         <div class="hbdown">
+                             <ul>
+                                 <!-- 数据渲染 -->
+                             </ul>   
+                         </div>
+                     </li>
+                     <li>
+                         <a href="#">全部  <i class="iconfont icon-xiajiantou1"></i></a>
+                     </li>
+                 </ul>
+             </div>
+             <div class="cdp_con">
+                 <ul class="clearfix">
+                    <!-- 数据渲染 -->
+                 </ul>
+             </div>
+         </div>
+         <!-- 底部 -->
+         <div class="mmm_footer">
+             <div class="foot_nav">
+                 <ul class="clearfix">
+                     <li class="br"><a href="#">登录</a></li>
+                     <li class="br"><a href="#">注册</a></li>
+                     <li><a href="#">返回顶部</a></li>
+                 </ul>
+             </div>
+             <div class="foot_text">
+                 <p class="link-t"><span><a href="#">手机APP下载</a></span><span>慢慢买手机版</span><span>--掌上比价平台</span></p>
+                 <p class="link">m.manmanbuy.com</p>
+             </div>
+         </div>
+    </div>
+
+    <!-- 导航渲染 -->
+    <script type="text/html" id="jdTmp">
+    {{ each result v i }}
+        <li data-id="{{ v.shopId }}">
+            <a href="#">{{ v.shopName }}<i class="iconfont icon-duihao"></i></a>
+        </li>
+    {{ /each }}
+    </script>
+    <script type="text/html" id="hbTmp">
+    {{ each result v i }}
+        <li data-id="{{ v.areaId}}">
+            <a href="#">{{ v.areaName }}<i class="iconfont icon-duihao"></i></a>
+        </li>
+    {{ /each }}
+    </script>
+    <!-- 商品渲染 -->
+    <script type="text/html" id="productTmp">
+        {{ each result v i }}
+        <li>
+            <a href="#">
+                <div class="img">
+                        <img src="{{ v.productImg }}" alt="">
+                </div>
+                <div class="pro_info">
+                    <div class="title txt-ellipsis">
+                           {{ v.productName }}
+                    </div>
+                    <div class="price">{{ v.productPrice }}</div>
+                    <div class="cd">
+                        去凑单
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/gsproduct.js"></script>
+</body>
+</html>
